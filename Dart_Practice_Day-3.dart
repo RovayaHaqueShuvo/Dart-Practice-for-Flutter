@@ -18,7 +18,7 @@ String getResultStatus(int number) {
   } else {
     return "Enter Number";
   }
-  ;
+
 }
 
 //Create a function that takes an integer as an argument and returns the cubic number of that argument.(Example: input: 3, output: 27)
