@@ -47,7 +47,10 @@ class VisaCard {
   payBill(billAmound) {
     bool bill = billAmound >= totalOutstanding;
     if (bill == true) {
-      totalOutstanding -= billAmound;
+      cardMonthlyLimitAmount = billAmound - totalOutstanding;
+      totalOutstanding = 0.0;
+
+
       return 'Your bill payment is successful. Current total outstanding is $totalOutstanding';
     }
     return 'Bill amount exceeds your current outstanding amount. Please verify your bill amount and try again';
@@ -61,7 +64,7 @@ void main() {
       cardMonthlyLimitAmount: 1000,
       totalOutstanding: 0.0);
 
-  print(roni.withdraw(500, ));
+  print(roni.withdraw(500 ));
   print(roni.withdraw(6000));
 
   print(roni.printBill());
